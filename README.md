@@ -10,7 +10,7 @@ C++
 
 В данный момент программа спит.
 
-![workingprogramm](/Users/plotnii/Documents/GitHub/robot/workingprogramm1)
+![workingprogramm](robot/workingprogramm1)
 
 ### План работы:
       
