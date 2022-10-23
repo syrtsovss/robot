@@ -13,14 +13,24 @@ inline long double gradrad(long double a); // эта функция перево
 inline long double radgrad(long double a); // эта функция переводит радианы в градусы
 int main()
 {
+    cout.precision(15);
     system("chcp 65001");
     long double V0;
     text_out("Введите начальную скорость (м/c):");
     cin >> V0;
+    while(V0 < 0)
+    {
+        cout << "Для того, чтобы тело полетело, его необходимо бросить. Пожалуйста, введите неотрицательную скорость броска :" << endl;
+        cin >> V0;
+    }
     long double corner;
     text_out("Введите угол броска (в радианах):");
     cin >> corner;
-
+    while(sin(corner) < 0)
+    {
+        cout << "Для того, чтобы тело полетело, его необходимо бросить вверх. Пожалуйста, введите новый угол броска:" << endl;
+        cin >> corner;
+    }
     long double up_time = V0 * sin(corner) / g;
 
     cout << "Время подъема равно: " << '\t' << '\t' << up_time << " секунд" << endl;
