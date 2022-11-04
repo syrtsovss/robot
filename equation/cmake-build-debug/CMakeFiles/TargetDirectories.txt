@@ -1,0 +1,3 @@
+C:/PROGECTS_INF/equation/cmake-build-debug/CMakeFiles/equation.dir
+C:/PROGECTS_INF/equation/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/PROGECTS_INF/equation/cmake-build-debug/CMakeFiles/rebuild_cache.dir

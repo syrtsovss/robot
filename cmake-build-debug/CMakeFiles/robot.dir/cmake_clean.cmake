@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/robot.dir/main.cpp.o"
-  "CMakeFiles/robot.dir/main.cpp.o.d"
-  "robot"
+  "CMakeFiles/robot.dir/main.cpp.obj"
+  "CMakeFiles/robot.dir/main.cpp.obj.d"
+  "librobot.dll.a"
+  "robot.exe"
+  "robot.exe.manifest"
   "robot.pdb"
 )
 

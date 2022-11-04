@@ -6,6 +6,8 @@
 #include<cmath>
 using namespace std;
 
+struct ballictic;
+
 long double g = 9.8298785762;
 long double PI = 3.141592653589793238462643383279;
 inline void text_out(string s); // эта функция отвечает за удобный вывод данных в консоль пользователя
@@ -63,3 +65,12 @@ inline long double radgrad(long double a)
 }
 
 // Phys
+
+struct ballictic
+{
+    long double up_time(long double V0, long double corner)
+    {
+        return
+    }
+
+};

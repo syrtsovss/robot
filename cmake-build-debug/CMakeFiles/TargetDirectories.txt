@@ -1,3 +1,3 @@
-/Users/admin/Desktop/Clion Projects/robot/cmake-build-debug/CMakeFiles/robot.dir
-/Users/admin/Desktop/Clion Projects/robot/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/admin/Desktop/Clion Projects/robot/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/PROGECTS_INF/robot/cmake-build-debug/CMakeFiles/robot.dir
+C:/PROGECTS_INF/robot/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/PROGECTS_INF/robot/cmake-build-debug/CMakeFiles/rebuild_cache.dir

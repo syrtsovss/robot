@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/admin/Desktop/Clion Projects/robot/main.cpp" "CMakeFiles/robot.dir/main.cpp.o" "gcc" "CMakeFiles/robot.dir/main.cpp.o.d"
+  "C:/PROGECTS_INF/robot/main.cpp" "CMakeFiles/robot.dir/main.cpp.obj" "gcc" "CMakeFiles/robot.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links.
