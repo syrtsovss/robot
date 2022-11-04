@@ -767,8 +767,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "C:/PROGECTS_INF/equation/cmake-build-debug",
-		"source" : "C:/PROGECTS_INF/equation"
+		"build" : "C:/PROGECTS_INF/robot/equation/cmake-build-debug",
+		"source" : "C:/PROGECTS_INF/robot/equation"
 	},
 	"version" : 
 	{

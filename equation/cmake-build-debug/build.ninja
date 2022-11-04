@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/PROGECTS_INF/equation/cmake-build-debug/
+cmake_ninja_workdir = C$:/PROGECTS_INF/robot/equation/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target equation
 
@@ -49,7 +49,7 @@ cmake_ninja_workdir = C$:/PROGECTS_INF/equation/cmake-build-debug/
 
 build cmake_object_order_depends_target_equation: phony || CMakeFiles/equation.dir
 
-build CMakeFiles/equation.dir/main.cpp.obj: CXX_COMPILER__equation_Debug C$:/PROGECTS_INF/equation/main.cpp || cmake_object_order_depends_target_equation
+build CMakeFiles/equation.dir/main.cpp.obj: CXX_COMPILER__equation_Debug C$:/PROGECTS_INF/robot/equation/main.cpp || cmake_object_order_depends_target_equation
   DEP_FILE = CMakeFiles\equation.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\equation.dir
@@ -81,7 +81,7 @@ build equation.exe: CXX_EXECUTABLE_LINKER__equation_Debug CMakeFiles/equation.di
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\PROGECTS_INF\equation\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D C:\PROGECTS_INF\robot\equation\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -92,7 +92,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\PROGECTS_INF\equation\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\PROGECTS_INF\equation -BC:\PROGECTS_INF\equation\cmake-build-debug"
+  COMMAND = cmd.exe /C "cd /D C:\PROGECTS_INF\robot\equation\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.2.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\PROGECTS_INF\robot\equation -BC:\PROGECTS_INF\robot\equation\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -110,7 +110,7 @@ build equation: phony equation.exe
 # =============================================================================
 
 #############################################
-# Folder: C:/PROGECTS_INF/equation/cmake-build-debug
+# Folder: C:/PROGECTS_INF/robot/equation/cmake-build-debug
 
 build all: phony equation.exe
 
