@@ -33,6 +33,7 @@ vector <string> claims { // Вектор, хранящий физические 
 
 
 void get_it(vector<string> &var, string equ); // Функция, закладывающая в ПУСТОЙ вектор, переданный по ссылке, величины, известные в формуле
+void get_it_short(vector<string> &var, string equ); // Функция, закладывающая в ПУСТОЙ вектор, переданный по ссылке, величины, известные в формуле, ЗАБИВАЯ на степени. Это удобно, т.к. в некоторых формулах нужна лишь переменная, а ее значение мы знаем, тогда знаем значение ее квадрата и т.п.
 template<typename T> void out_vec (vector<T>& a); // Функция вывода любого вектора
 template<typename T> void out_test (vector<T>& a); // Функция тестового вывода вектора (вывод не распространяется в консоль тестирующей системы, в Сlion подсвечивается красным
 inline void get_beauty (string inputt, vector<string>& input);
@@ -47,7 +48,7 @@ int main() {
     vector<vector<string>> tex; // в этом векторе лежат все данные формул (отсортированные)
     for(int i = 0; i < claims.size(); i++){
         vector <string> var;
-        get_it(var, claims[i]);
+        get_it_short(var, claims[i]);
         sort(var.begin(), var.end());
         tex.push_back(var);
         out_test(tex[i]); // ЗДЕСЬ ЛЕЖИТ ТЕСТОВЫЙ ВЫВОД ВЕКТОРА ФОРМУЛ
@@ -96,6 +97,39 @@ if(period.empty())
 period.clear();
 }
 return;
+}
+
+void get_it_short(vector<string> &var, string equ)
+{
+    string period;
+    for(int i = 0; i < equ.size(); i++)
+    {
+        char h;
+        h = equ[i];
+        if(h != ')' && h != '(' && h != '=' && h != '*' && h != '-' && h != '/' && h != '+' && h!= '^')
+        {
+            period += h;
+        }
+        else {
+            if(number_test(period) == false)
+            {
+                var.push_back(period);
+            }
+            period.clear();
+        }
+    }
+    if(period.empty())
+    {
+
+    } else
+    {
+        if(number_test(period) == false)
+        {
+            var.push_back(period);
+        }
+        period.clear();
+    }
+    return;
 }
 
 template<typename T> void out_vec (vector<T>& a){
