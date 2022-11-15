@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.23"
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "equation::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-equation-Debug-b9591a9601e63f7ccd27.json",
+					"jsonFile" : "target-equation-Debug-b3679ca82658f509baab.json",
 					"name" : "equation",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/PROGECTS_INF/robot/equation/cmake-build-debug",
-		"source" : "C:/PROGECTS_INF/robot/equation"
+		"build" : "/Users/admin/Desktop/Clion Projects/robot/equation/cmake-build-debug",
+		"source" : "/Users/admin/Desktop/Clion Projects/robot/equation"
 	},
 	"version" : 
 	{

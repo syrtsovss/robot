@@ -2,10 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "equation.exe"
-		},
-		{
-			"path" : "equation.pdb"
+			"path" : "equation"
 		}
 	],
 	"backtrace" : 1,
@@ -38,7 +35,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g"
+					"fragment" : "-g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk"
 				},
 				{
 					"fragment" : "-std=gnu++14"
@@ -71,16 +68,12 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
-			},
-			{
-				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
-				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
 	"name" : "equation",
-	"nameOnDisk" : "equation.exe",
+	"nameOnDisk" : "equation",
 	"paths" : 
 	{
 		"build" : ".",

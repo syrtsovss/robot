@@ -4,14 +4,14 @@
 #include <algorithm>
 #include <map>
 using namespace std;
-
-map <string, double> form { // Структура данных, отвечающая за значение данной физической величины, в противном случае это 0. В теории, сюда можно закинуть рандомные константы для удобства дебага
+map <string, long double> form { // Структура данных, отвечающая за значение данной физической величины, в противном случае это 0. В теории, сюда можно закинуть рандомные константы для удобства дебага
         {"VO", 0},
         {"t", 0},
         {"t_end", 0},
         {"V_end", 0},
         {"m", 0},
         {"g", 9.81}
+
 };
 map <string, bool> known { // Структура данных, отвечающая за то, знаем ли мы данную физическую величину
         {"VO", false},
@@ -38,7 +38,10 @@ template<typename T> void out_vec (vector<T>& a); // Функция вывода
 template<typename T> void out_test (vector<T>& a); // Функция тестового вывода вектора (вывод не распространяется в консоль тестирующей системы, в Сlion подсвечивается красным
 inline void get_beauty (string inputt, vector<string>& input);
 bool number_test (string s); // Эта функция проверяет,  является ли строка числом. Необходимо для того, чтобы понять, что на самом деле является неизвестным, а что константой
-string find_form(vector<vector <string>> tex, vector<string> claims, vector<string> input);
+vector<string> find_form(vector<vector <string>> tex, vector<string> claims, vector<string> &input, map<string, bool> &known, map<string, double> &form);
+long double convertation_system_value(string input);
+bool num (char h);
+short num_value(char h);
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -60,11 +63,71 @@ int main() {
     getline(cin, input_full); //  Осторожно, ввод необходимо начинать С ПРОБЕЛА и В ОДНУ СТРОКУ. Используется getline, чтобы программа не зависала при каждом использовании из-за неизвестного количества переменных.
     get_beauty(input_full, input); // теперь в векторе input лежат данные задач
     sort(input.begin(), input.end()); // СОРТИРОВКА ВЕКТОРА ВВОДА, ПРИ ИЗМЕНЕНИИ СПОСОБА ВВОДА ТРЕБУЕТСЯ ОБРАТИТЬ ОСОБОЕ ВНИМАНИЕ
-    cout << find_form(tex, claims, input);
+
+
 
 
     return 0;
 }
+
+short num_value(char h)
+{
+    return int(h-'0');
+}
+
+bool num (char h)
+{
+    int ch = int(h-'0');
+    if(ch == 1 || ch == 2 || ch == 3 || ch == 4 || ch == 5 || ch == 6 || ch == 7 || ch == 8 || ch == 9 || ch == 0 || h == '.')
+    {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+long double convertation_system_value(string input)
+{
+    long double value1 = 0;
+    long double value2 = 0;
+    string quantity;
+    bool point = false;
+    for(int i = 0; i < input.size(); i++)
+    {
+        if(input[i] == '.')
+        {
+            if(point == true)
+            {
+                cout << "FATAL ERROR";
+            }
+            point = true;
+            continue;
+        }
+        if(num(input[i]) == true )
+        {
+            if(point == false){
+                value1 *= 10;
+                value1 += num_value(input[i]);
+                continue;}
+            else
+            {
+                value2 *= 10;
+                value2 += num_value(input[i]);
+            }
+        }
+        else {
+            quantity += input[i];
+        }
+    }
+    while(value2 > 1)
+    {
+        value2 /= 10;
+    }
+    return value1 + value2;
+}
+
+
+
 
 void get_it(vector<string> &var, string equ)
 {
@@ -176,8 +239,11 @@ bool number_test (string s)
     }
     return true;
 }
-string find_form(vector<vector <string>> tex, vector<string> claims, vector<string> input)
+vector<string> find_form(vector<vector <string>> tex, vector<string> claims, vector<string> &input, map<string, bool> &known, map<string, double> &form)
 {
+    vector <string> ret; // Вектор, который будет возвращать наша функция
+    int new_value = 0;
+    while(true){
       for(int i = 0; i < tex.size(); i++)
       {
           vector <string> interval = tex[i];
@@ -207,13 +273,11 @@ string find_form(vector<vector <string>> tex, vector<string> claims, vector<stri
                   }
               }
           }
-          if(destr == true)
-          {
+          if(destr == true) {
               continue;
           }
-          return claims[i];
-      }
-      return "ERROR, now robo can't solve it";
+      }}
+      return ret;
 }
 /*
  string equ;
