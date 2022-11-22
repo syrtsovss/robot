@@ -43,6 +43,11 @@ long double convertation_system_value(string input);
 bool num (char h);
 short num_value(char h);
 int main() {
+    // time
+    auto now = chrono::system_clock::now();
+    time_t end_time = chrono::system_clock::to_time_t(now);
+    cerr << ctime(&end_time) << '\n';
+
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
